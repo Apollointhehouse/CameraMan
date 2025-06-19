@@ -1,16 +1,16 @@
-package turniplabs.examplemod.mixin;
+package me.apollointhehouse.mixin;
 
 import net.minecraft.client.gui.ScreenMainMenu;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import turniplabs.examplemod.ExampleMod;
+import me.apollointhehouse.Freecam;
 
 @Mixin(value = ScreenMainMenu.class, remap = false)
 public class ScreenMainMenuMixin {
     @Inject(method = "<clinit>", at = @At("HEAD"))
     private static void examplemod$onClinit(CallbackInfo ci) {
-        ExampleMod.LOGGER.info("This line is printed by the example Mixin!");
+        Freecam.LOGGER.info("This line is printed by the example Mixin!");
     }
 }

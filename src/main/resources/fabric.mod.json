@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "freecam",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Freecam",
+  "description": "Add's freecam to BTA (only on supported servers).",
   "authors": [
-    "Turnip Labs"
+    "Apollointhehouse"
   ],
   "contact": {
     "homepage": "",
@@ -20,30 +20,24 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "turniplabs.examplemod.ExampleMod"
+        "value": "me.apollointhehouse.Freecam"
       }
     ],
-    "beforeGameStart": [
-      {
-        "adapter": "kotlin",
-        "value": "turniplabs.examplemod.ExampleMod"
-      }
+		"beforeClientStart": [
+			{
+				"adapter": "kotlin",
+				"value": "me.apollointhehouse.Freecam"
+			}
 		],
-    "afterGameStart": [
-      {
-        "adapter": "kotlin",
-        "value": "turniplabs.examplemod.ExampleMod"
-      }
-		],
-    "recipesReady": [
-      {
-        "adapter": "kotlin",
-        "value": "turniplabs.examplemod.ExampleMod"
-      }
+		"afterClientStart": [
+			{
+				"adapter": "kotlin",
+				"value": "me.apollointhehouse.Freecam"
+			}
 		]
-  },
+	},
   "mixins": [
-    "examplemod.mixins.json"
+    "freecam.mixins.json"
   ],
 
   "depends": {
