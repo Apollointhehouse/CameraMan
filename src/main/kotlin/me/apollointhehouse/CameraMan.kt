@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory
 import turniplabs.halplibe.helper.EnvironmentHelper
 import turniplabs.halplibe.util.GameStartEntrypoint
 
-object Freecam : GameStartEntrypoint {
-	const val MOD_ID = "freecam"
+object CameraMan : GameStartEntrypoint {
+	const val MOD_ID = "cameraman"
 	private val logger = LoggerFactory.getLogger(MOD_ID)
 
 	override fun afterGameStart() {

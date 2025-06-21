@@ -1,7 +1,7 @@
 package me.apollointhehouse.client.net
 
 import me.apollointhehouse.client.Config
-import me.apollointhehouse.client.modules.FreecamMod
+import me.apollointhehouse.client.modules.Freecam
 import me.apollointhehouse.core.net.NetHandler
 import me.apollointhehouse.raywire.api.EventHandler
 import me.apollointhehouse.raywire.api.event.core.network.PacketEvent
@@ -15,7 +15,7 @@ class ClientNetHandler : NetHandler {
 	fun onLogin(event: PacketEvent.Receive) {
 		if (event.packet !is PacketAESSendKey) return
 		Config.supported = false
-		FreecamMod.disable()
+		Freecam.disable()
 
 		val mc = Minecraft.getMinecraft()
 

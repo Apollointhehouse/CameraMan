@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "freecam",
+  "id": "cameraman",
   "version": "${version}",
 
-  "name": "Freecam",
+  "name": "Camera Man",
   "description": "Add's freecam to BTA (only on supported servers).",
   "authors": [
     "Apollointhehouse"
   ],
   "contact": {
     "homepage": "",
-    "sources": ""
+    "sources": "https://github.com/Apollointhehouse/Freecam"
   },
 
   "license": "CC0-1.0",
@@ -20,18 +20,18 @@
 		"beforeGameStart": [
 			{
 				"adapter": "kotlin",
-				"value": "me.apollointhehouse.Freecam"
+				"value": "me.apollointhehouse.CameraMan"
 			}
 		],
 		"afterGameStart": [
 			{
 				"adapter": "kotlin",
-				"value": "me.apollointhehouse.Freecam"
+				"value": "me.apollointhehouse.CameraMan"
 			}
 		]
 	},
   "mixins": [
-    "freecam.mixins.json"
+    "cameraman.mixins.json"
   ],
 
   "depends": {

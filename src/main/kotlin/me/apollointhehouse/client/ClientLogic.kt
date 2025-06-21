@@ -1,7 +1,7 @@
 package me.apollointhehouse.client
 
 import me.apollointhehouse.core.EnvLogic
-import me.apollointhehouse.client.modules.FreecamMod
+import me.apollointhehouse.client.modules.Freecam
 import me.apollointhehouse.client.net.ClientNetHandler
 import me.apollointhehouse.client.options.FreecamOptions
 import me.apollointhehouse.client.utils.addCallback
@@ -29,10 +29,10 @@ class ClientLogic : EnvLogic {
 		options.freecam.addCallback { option ->
 			if (!Config.supported) return@addCallback
 			if (!option.value) {
-				FreecamMod.disable()
+				Freecam.disable()
 				return@addCallback
 			}
-			FreecamMod.enable()
+			Freecam.enable()
 		}
 
 		options.freecamBind.addCallback {
