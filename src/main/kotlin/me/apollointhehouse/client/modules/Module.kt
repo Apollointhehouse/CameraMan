@@ -1,5 +1,6 @@
 package me.apollointhehouse.client.modules
 
+import me.apollointhehouse.client.ClientLogic.Companion.clientRegistry
 import me.apollointhehouse.raywire.Raywire.globalRegistry
 import net.minecraft.client.Minecraft
 import net.minecraft.client.entity.player.PlayerLocal
@@ -19,6 +20,7 @@ abstract class Module {
 
 		enabled = false
 		globalRegistry.unsubscribe(this)
+		clientRegistry.unsubscribe(this)
 		onDisable()
 	}
 
@@ -28,5 +30,6 @@ abstract class Module {
 		enabled = true
 		onEnable()
 		globalRegistry.subscribe(this)
+		clientRegistry.subscribe(this)
 	}
 }
