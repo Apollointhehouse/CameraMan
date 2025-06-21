@@ -1,4 +1,4 @@
-package me.apollointhehouse.mixin;
+package me.apollointhehouse.mixin.core;
 
 import net.minecraft.core.player.gamemode.Gamemode;
 import org.spongepowered.asm.mixin.Mixin;

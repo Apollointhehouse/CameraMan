@@ -1,6 +1,6 @@
 package me.apollointhehouse.client.utils
 
-import me.apollointhehouse.mixin.WorldRendererAccessor
+import me.apollointhehouse.mixin.client.WorldRendererAccessor
 import net.minecraft.client.Minecraft
 import net.minecraft.client.render.camera.ICamera
 import net.minecraft.client.render.tessellator.Tessellator

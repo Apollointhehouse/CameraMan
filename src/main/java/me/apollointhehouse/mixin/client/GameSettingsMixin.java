@@ -1,4 +1,4 @@
-package me.apollointhehouse.mixin;
+package me.apollointhehouse.mixin.client;
 
 import me.apollointhehouse.client.options.FreecamOptions;
 import net.minecraft.client.input.InputDevice;

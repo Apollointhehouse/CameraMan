@@ -5,7 +5,8 @@ import me.apollointhehouse.client.modules.FreecamMod
 import me.apollointhehouse.client.net.ClientNetHandler
 import me.apollointhehouse.client.options.FreecamOptions
 import me.apollointhehouse.client.utils.addCallback
-import me.apollointhehouse.raywire.Raywire.registry
+import me.apollointhehouse.raywire.Raywire.globalRegistry
+import me.apollointhehouse.raywire.api.Registry
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.options.components.BooleanOptionComponent
 import net.minecraft.client.gui.options.components.KeyBindingComponent
@@ -17,7 +18,7 @@ class ClientLogic : EnvLogic {
 		logger.debug("Running client logic...")
 
 		logger.debug("Registering client net handler...")
-		registry.subscribe(ClientNetHandler())
+		globalRegistry.subscribe(ClientNetHandler())
 		createOptions()
 	}
 
@@ -47,5 +48,6 @@ class ClientLogic : EnvLogic {
 
 	companion object {
 		private val logger = LoggerFactory.getLogger(ClientLogic::class.java)
+		@JvmField val clientRegistry = Registry()
 	}
 }

@@ -1,4 +1,4 @@
-package me.apollointhehouse.mixin;
+package me.apollointhehouse.mixin.client;
 
 import net.minecraft.client.render.WorldRenderer;
 import org.spongepowered.asm.mixin.Mixin;

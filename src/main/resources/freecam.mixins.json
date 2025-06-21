@@ -4,13 +4,13 @@
   "package": "me.apollointhehouse.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "GamemodeAccessor"
+    "core.GamemodeAccessor"
   ],
   "client": [
-    "GameSettingsMixin",
-    "MinecraftMixin",
-    "WorldRendererAccessor",
-    "WorldRendererMixin"
+    "client.GameSettingsMixin",
+    "client.MinecraftMixin",
+    "client.WorldRendererAccessor",
+    "client.WorldRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

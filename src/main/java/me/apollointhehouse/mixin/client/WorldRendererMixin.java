@@ -1,4 +1,4 @@
-package me.apollointhehouse.mixin;
+package me.apollointhehouse.mixin.client;
 
 import me.apollointhehouse.client.events.Render3DEvent;
 import me.apollointhehouse.client.utils.RenderUtils;
@@ -9,6 +9,8 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import static me.apollointhehouse.client.ClientLogic.clientRegistry;
 
 @Mixin(value = WorldRenderer.class, remap = false)
 public class WorldRendererMixin {
@@ -21,7 +23,7 @@ public class WorldRendererMixin {
 
 		ICamera camera = ((WorldRenderer)(Object)this).mc.activeCamera;
 		renderUtils.begin(camera, renderPartialTicks);
-		event.call();
+		clientRegistry.invoke(event);
 		renderUtils.end();
 	}
 }

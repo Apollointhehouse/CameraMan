@@ -3,7 +3,7 @@
 package me.apollointhehouse.client.modules
 
 import me.apollointhehouse.client.events.Render3DEvent
-import me.apollointhehouse.mixin.GamemodeAccessor
+import me.apollointhehouse.mixin.core.GamemodeAccessor
 import me.apollointhehouse.raywire.api.EventHandler
 import me.apollointhehouse.raywire.api.event.core.network.PacketEvent
 import net.minecraft.core.net.packet.PacketMovePlayer
