@@ -10,8 +10,12 @@ import net.minecraft.core.net.packet.PacketMovePlayer
 import net.minecraft.core.util.helper.Color
 import net.minecraft.core.util.phys.AABB
 import net.minecraft.core.util.phys.Vec3
+import org.lwjgl.input.Keyboard
 
-object Freecam : Module() {
+object Freecam : Module(
+	name = "Freecam",
+	keyCode = Keyboard.KEY_Y
+) {
 	private var pos = Vec3.getPermanentVec3(0.0,0.0,0.0)
 
 	override fun onEnable() {

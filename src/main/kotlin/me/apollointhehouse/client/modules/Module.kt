@@ -5,7 +5,7 @@ import me.apollointhehouse.raywire.Raywire.globalRegistry
 import net.minecraft.client.Minecraft
 import net.minecraft.client.entity.player.PlayerLocal
 
-abstract class Module {
+abstract class Module(val name: String, val keyCode: Int = -1) {
 	var enabled = false
 		private set
 

@@ -1,3 +1,4 @@
-freecam.options.category.keybinds.explicit=Freecam
-key.freecam.toggle=Toggle Freecam
-options.key.freecam.toggle=Toggle Freecam
+gui.options.page.cameraman = Camera Man
+gui.options.page.cameraman.category.general = General
+
+gui.options.page.controls.category.cameraman = Camera Man

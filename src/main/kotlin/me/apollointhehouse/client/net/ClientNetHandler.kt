@@ -1,7 +1,7 @@
 package me.apollointhehouse.client.net
 
-import me.apollointhehouse.client.Config
-import me.apollointhehouse.client.modules.Freecam
+import me.apollointhehouse.client.ClientConfig
+import me.apollointhehouse.client.modules.ModuleManager
 import me.apollointhehouse.core.net.NetHandler
 import me.apollointhehouse.raywire.api.EventHandler
 import me.apollointhehouse.raywire.api.event.core.network.PacketEvent
@@ -14,13 +14,13 @@ class ClientNetHandler : NetHandler {
 	@EventHandler
 	fun onLogin(event: PacketEvent.Receive) {
 		if (event.packet !is PacketAESSendKey) return
-		Config.supported = false
-		Freecam.disable()
+		ClientConfig.supported = false
+		ModuleManager.disableAll()
 
 		val mc = Minecraft.getMinecraft()
 
-		logger.debug("Sending Freecam Request to server...")
-		mc.sendQueue.addToSendQueue(PacketCustomPayload("Freecam", byteArrayOf(0x00)))
+		logger.debug("Sending CameraMan Request to server...")
+		mc.sendQueue.addToSendQueue(PacketCustomPayload("CameraMan", byteArrayOf(0x00)))
 	}
 
 	@OptIn(ExperimentalStdlibApi::class)
@@ -28,17 +28,17 @@ class ClientNetHandler : NetHandler {
 	fun onCustomPayload(event: PacketEvent.Receive) {
 		val packet = event.packet as? PacketCustomPayload ?: return
 
-		if (packet.channel != "Freecam") return
+		if (packet.channel != "CameraMan") return
 		if (packet.data.isEmpty()) return
 
 		when (val data = packet.data.first()) {
 			0x01.toByte() -> {
-				logger.debug("Freecam Supported!")
-				Config.supported = true
+				logger.debug("CameraMan Supported!")
+				ClientConfig.supported = true
 			}
 			else -> {
-				logger.warn("Unknown Freecam data received: ${data.toHexString()}")
-				Config.supported = false
+				logger.warn("Unknown CameraMan data received: ${data.toHexString()}")
+				ClientConfig.supported = false
 			}
 		}
 	}

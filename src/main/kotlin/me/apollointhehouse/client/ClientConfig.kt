@@ -1,5 +1,5 @@
 package me.apollointhehouse.client
 
-object Config {
+object ClientConfig {
 	var supported = false
 }
