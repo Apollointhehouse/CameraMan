@@ -6,7 +6,7 @@ A Babric mod for BTA that allows you to use Freecam!
 ## Dependencies
 
 - [Halplibe 5.2.4](https://github.com/Turnip-Labs/halplibe)
-- [Raywire 1.0.0](https://github.com/Apollointhehouse/raywire)
+- [Raywire 1.0.1](https://github.com/Apollointhehouse/raywire)
 - [Fabric Language Kotlin 1.11.0](https://github.com/FabricMC/fabric-language-kotlin)
 
 ## Usage
