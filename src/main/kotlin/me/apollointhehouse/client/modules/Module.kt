@@ -1,4 +1,4 @@
-package me.apollointhehouse.modules
+package me.apollointhehouse.client.modules
 
 import me.apollointhehouse.raywire.Raywire.registry
 import net.minecraft.client.Minecraft

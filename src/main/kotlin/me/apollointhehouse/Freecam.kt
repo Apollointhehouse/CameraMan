@@ -1,7 +1,7 @@
 package me.apollointhehouse
 
-import me.apollointhehouse.net.client.ClientLogic
-import me.apollointhehouse.net.server.ServerLogic
+import me.apollointhehouse.client.ClientLogic
+import me.apollointhehouse.server.ServerLogic
 import me.apollointhehouse.raywire.Raywire.registry
 import org.slf4j.LoggerFactory
 import turniplabs.halplibe.helper.EnvironmentHelper

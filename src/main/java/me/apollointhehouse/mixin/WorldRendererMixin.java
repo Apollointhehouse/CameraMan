@@ -1,7 +1,7 @@
 package me.apollointhehouse.mixin;
 
-import me.apollointhehouse.events.Render3DEvent;
-import me.apollointhehouse.utils.RenderUtils;
+import me.apollointhehouse.client.events.Render3DEvent;
+import me.apollointhehouse.client.utils.RenderUtils;
 import net.minecraft.client.render.WorldRenderer;
 import net.minecraft.client.render.camera.ICamera;
 import org.spongepowered.asm.mixin.Mixin;

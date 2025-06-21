@@ -1,4 +1,4 @@
-package me.apollointhehouse.net.server
+package me.apollointhehouse.server
 
 import me.apollointhehouse.raywire.api.EventHandler
 import me.apollointhehouse.raywire.api.event.core.network.PacketEvent
@@ -19,10 +19,10 @@ class ServerLogic {
 			0x00.toByte() -> {
 				logger.info("Handling Freecam Request!")
 				MinecraftServer.getInstance().playerList.sendPacketToAllPlayers(
-					PacketCustomPayload(
-						"Freecam",
-						byteArrayOf(0x01)
-					)
+                    PacketCustomPayload(
+                        "Freecam",
+                        byteArrayOf(0x01)
+                    )
 				)
 			}
 			else -> {

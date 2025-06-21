@@ -1,6 +1,6 @@
 package me.apollointhehouse.mixin;
 
-import me.apollointhehouse.events.KeyPressEvent;
+import me.apollointhehouse.client.events.KeyPressEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.input.InputDevice;
 import org.spongepowered.asm.mixin.Mixin;

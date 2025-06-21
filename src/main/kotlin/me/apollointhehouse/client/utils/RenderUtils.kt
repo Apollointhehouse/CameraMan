@@ -1,4 +1,4 @@
-package me.apollointhehouse.utils
+package me.apollointhehouse.client.utils
 
 import me.apollointhehouse.mixin.WorldRendererAccessor
 import net.minecraft.client.Minecraft

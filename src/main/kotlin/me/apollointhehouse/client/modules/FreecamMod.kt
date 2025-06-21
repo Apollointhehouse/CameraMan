@@ -1,7 +1,8 @@
 @file:OptIn(ExperimentalStdlibApi::class)
-package me.apollointhehouse.modules
 
-import me.apollointhehouse.events.Render3DEvent
+package me.apollointhehouse.client.modules
+
+import me.apollointhehouse.client.events.Render3DEvent
 import me.apollointhehouse.mixin.GamemodeAccessor
 import me.apollointhehouse.raywire.api.EventHandler
 import me.apollointhehouse.raywire.api.event.core.network.PacketEvent

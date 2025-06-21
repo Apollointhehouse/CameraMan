@@ -1,6 +1,6 @@
 package me.apollointhehouse.mixin;
 
-import me.apollointhehouse.options.FreecamOptions;
+import me.apollointhehouse.client.options.FreecamOptions;
 import net.minecraft.client.input.InputDevice;
 import net.minecraft.client.option.GameSettings;
 import net.minecraft.client.option.KeyBinding;

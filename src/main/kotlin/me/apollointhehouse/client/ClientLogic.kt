@@ -1,10 +1,10 @@
-package me.apollointhehouse.net.client
+package me.apollointhehouse.client
 
-import me.apollointhehouse.modules.FreecamMod
-import me.apollointhehouse.options.FreecamOptions
+import me.apollointhehouse.client.modules.FreecamMod
+import me.apollointhehouse.client.options.FreecamOptions
+import me.apollointhehouse.client.utils.addCallback
 import me.apollointhehouse.raywire.api.EventHandler
 import me.apollointhehouse.raywire.api.event.core.network.PacketEvent
-import me.apollointhehouse.utils.addCallback
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.options.components.BooleanOptionComponent
 import net.minecraft.client.gui.options.components.KeyBindingComponent

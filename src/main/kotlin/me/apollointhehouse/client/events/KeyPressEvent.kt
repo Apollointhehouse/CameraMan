@@ -1,4 +1,4 @@
-package me.apollointhehouse.events
+package me.apollointhehouse.client.events
 
 import me.apollointhehouse.raywire.api.Event
 import net.minecraft.client.input.InputDevice

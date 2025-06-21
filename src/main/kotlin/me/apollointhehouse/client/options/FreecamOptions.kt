@@ -1,4 +1,4 @@
-package me.apollointhehouse.options
+package me.apollointhehouse.client.options
 
 import net.minecraft.client.option.KeyBinding
 import net.minecraft.client.option.OptionBoolean

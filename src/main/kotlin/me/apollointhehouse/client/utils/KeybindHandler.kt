@@ -1,6 +1,6 @@
-package me.apollointhehouse.utils
+package me.apollointhehouse.client.utils
 
-import me.apollointhehouse.events.KeyPressEvent
+import me.apollointhehouse.client.events.KeyPressEvent
 import me.apollointhehouse.raywire.api.EventHandler
 import net.minecraft.client.option.KeyBinding
 
