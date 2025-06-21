@@ -12,7 +12,7 @@ import net.minecraft.core.util.phys.AABB
 import net.minecraft.core.util.phys.Vec3
 import org.lwjgl.input.Keyboard
 
-object Freecam : Module(
+class Freecam : Module(
 	name = "Freecam",
 	keyCode = Keyboard.KEY_Y
 ) {
@@ -26,6 +26,9 @@ object Freecam : Module(
 
 	override fun onDisable() {
 		player.moveTo(pos.x,pos.y,pos.z, player.yRot, player.xRot)
+		player.xd = 0.0
+		player.yd = 0.0
+		player.zd = 0.0
 
 		player.noPhysics = false
 		(player.gamemode as GamemodeAccessor).setCanInteract(true)
