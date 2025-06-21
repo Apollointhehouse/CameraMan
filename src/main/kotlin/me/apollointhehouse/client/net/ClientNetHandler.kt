@@ -2,6 +2,7 @@ package me.apollointhehouse.client.net
 
 import me.apollointhehouse.client.ClientConfig
 import me.apollointhehouse.client.modules.ModuleManager
+import me.apollointhehouse.client.options.OptionsPages
 import me.apollointhehouse.core.net.NetHandler
 import me.apollointhehouse.logger
 import me.apollointhehouse.raywire.api.EventHandler
@@ -14,8 +15,11 @@ class ClientNetHandler : NetHandler {
 	@EventHandler
 	fun onLogin(event: PacketEvent.Receive) {
 		if (event.packet !is PacketAESSendKey) return
+		OptionsPages.options.forEach { option ->
+			option.value = false
+			option.onUpdate()
+		}
 		ClientConfig.supported = false
-		ModuleManager.disableAll()
 
 		val mc = Minecraft.getMinecraft()
 

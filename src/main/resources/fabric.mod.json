@@ -5,6 +5,7 @@
 
   "name": "Camera Man",
   "description": "Add's freecam to BTA (only on supported servers).",
+	"icon": "icon.png",
   "authors": [
     "Apollointhehouse"
   ],

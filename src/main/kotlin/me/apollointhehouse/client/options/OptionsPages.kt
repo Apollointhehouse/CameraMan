@@ -18,6 +18,8 @@ import net.minecraft.core.block.Blocks
 import net.minecraft.core.lang.I18n
 
 object OptionsPages {
+	val options = mutableListOf<OptionBoolean>()
+
 	fun init() {
 		val mc: Minecraft = Minecraft.getMinecraft()
 		val settings = mc.gameSettings
@@ -40,6 +42,7 @@ object OptionsPages {
 				}
 				module.enable()
 			}
+			options.add(option)
 
 			entries["options.$optionKey"] = module.name
 
