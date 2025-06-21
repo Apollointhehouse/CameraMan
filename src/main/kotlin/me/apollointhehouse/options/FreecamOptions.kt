@@ -1,6 +1,5 @@
 package me.apollointhehouse.options
 
-import net.minecraft.client.gui.options.components.BooleanOptionComponent
 import net.minecraft.client.option.KeyBinding
 import net.minecraft.client.option.OptionBoolean
 

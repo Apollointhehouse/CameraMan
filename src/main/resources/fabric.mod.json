@@ -17,19 +17,13 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      {
-        "adapter": "kotlin",
-        "value": "me.apollointhehouse.Freecam"
-      }
-    ],
-		"beforeClientStart": [
+		"beforeGameStart": [
 			{
 				"adapter": "kotlin",
 				"value": "me.apollointhehouse.Freecam"
 			}
 		],
-		"afterClientStart": [
+		"afterGameStart": [
 			{
 				"adapter": "kotlin",
 				"value": "me.apollointhehouse.Freecam"

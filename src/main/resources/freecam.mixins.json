@@ -4,6 +4,7 @@
   "package": "me.apollointhehouse.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "GamemodeAccessor"
   ],
   "client": [
     "GameSettingsMixin"

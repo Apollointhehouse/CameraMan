@@ -90,8 +90,8 @@ dependencies {
 	// Helper library
 	// If you do not need Halplibe you can comment this line out or delete this line
 	modImplementation("turniplabs:halplibe:${project.halplibe_version}")
-
 	modImplementation("turniplabs:modmenu-bta:${project.mod_menu_version}")
+	modImplementation("com.github.Apollointhehouse:Raywire:$raywire_version")
 
 	implementation "org.slf4j:slf4j-api:1.8.0-beta4"
 	implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.16.0"
@@ -120,8 +120,6 @@ dependencies {
 	implementation("org.lwjgl:lwjgl-openal:$lwjglVersion")
 	implementation("org.lwjgl:lwjgl-opengl:$lwjglVersion")
 	implementation("org.lwjgl:lwjgl-stb:$lwjglVersion")
-
-	modImplementation("com.github.Apollointhehouse:Raywire:1.0.0")
 
 	modImplementation("net.fabricmc:fabric-language-kotlin:${project.flk_version}+kotlin.${project.kotlin_version}") {
 		exclude(group: "net.fabricmc", module: "fabric-loader")

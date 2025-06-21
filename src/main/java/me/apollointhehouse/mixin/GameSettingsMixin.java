@@ -1,7 +1,6 @@
 package me.apollointhehouse.mixin;
 
 import me.apollointhehouse.options.FreecamOptions;
-import net.minecraft.client.gui.options.components.BooleanOptionComponent;
 import net.minecraft.client.input.InputDevice;
 import net.minecraft.client.option.GameSettings;
 import net.minecraft.client.option.KeyBinding;
@@ -23,7 +22,6 @@ public class GameSettingsMixin implements FreecamOptions {
 	public @NotNull KeyBinding getFreecamBind() {
 		return freecamBind;
 	}
-
 
 	@Override
 	public @NotNull OptionBoolean getFreecam() {
