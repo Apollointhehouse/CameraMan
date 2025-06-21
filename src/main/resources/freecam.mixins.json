@@ -7,7 +7,10 @@
     "GamemodeAccessor"
   ],
   "client": [
-    "GameSettingsMixin"
+    "GameSettingsMixin",
+    "MinecraftMixin",
+    "WorldRendererAccessor",
+    "WorldRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
