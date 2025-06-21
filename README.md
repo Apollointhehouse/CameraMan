@@ -1,6 +1,6 @@
-# Freecam Mod
+# Camer aMan
 
-A Babric mod for BTA that allows you to use Freecam!  
+A Babric mod for BTA that allows you to use freecam!  
 **Note:** Freecam only works if both the client and server have the mod installed.
 
 ## Dependencies
