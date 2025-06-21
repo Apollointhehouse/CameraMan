@@ -2,7 +2,6 @@ package me.apollointhehouse
 
 import me.apollointhehouse.client.ClientLogic
 import me.apollointhehouse.server.ServerLogic
-import me.apollointhehouse.raywire.Raywire.registry
 import org.slf4j.LoggerFactory
 import turniplabs.halplibe.helper.EnvironmentHelper
 import turniplabs.halplibe.util.GameStartEntrypoint
@@ -12,13 +11,10 @@ object Freecam : GameStartEntrypoint {
 	private val logger = LoggerFactory.getLogger(MOD_ID)
 
 	override fun afterGameStart() {
-		if (EnvironmentHelper.isServerEnvironment()) {
-			logger.info("Freecam server started.")
-			registry.subscribe(ServerLogic())
-		} else {
-			logger.info("Freecam client started.")
-			registry.subscribe(ClientLogic())
-		}
+		val logic = if (EnvironmentHelper.isServerEnvironment()) ServerLogic() else ClientLogic()
+
+		logger.debug("Starting env logic...")
+		logic.run()
 	}
 
 	override fun beforeGameStart() {}
