@@ -8,13 +8,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static me.apollointhehouse.client.ClientLogic.clientRegistry;
+import static me.apollointhehouse.client.ClientLogic.clientBus;
 
 @Mixin(value = Minecraft.class, remap = false)
 public class MinecraftMixin {
 	@Inject(method = "checkBoundInputs", at = @At("HEAD"))
 	public void checkBoundInputs(InputDevice currentInputDevice, CallbackInfoReturnable<Boolean> cir) {
 		KeyPressEvent event = new KeyPressEvent(currentInputDevice);
-		clientRegistry.invoke(event);
+		clientBus.post(event);
 	}
 }

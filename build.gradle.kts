@@ -28,10 +28,7 @@ val loader_version: String by project
 
 val halplibe_version: String by project
 val mod_menu_version: String by project
-val flk_version: String by project
 val raywire_version: String by project
-
-val kotlin_version: String by project
 
 group = mod_group
 base.archivesName.set(mod_name)
@@ -135,9 +132,9 @@ dependencies {
 	implementation("org.lwjgl:lwjgl-opengl:$lwjglVersion")
 	implementation("org.lwjgl:lwjgl-stb:$lwjglVersion")
 
-	modImplementation("net.fabricmc:fabric-language-kotlin:$flk_version+kotlin.$kotlin_version") {
-		exclude(group = "net.fabricmc", module = "fabric-loader")
-	}
+    modImplementation("net.fabricmc:fabric-language-kotlin:1.11.0+kotlin.2.0.0") {
+        exclude(group = "net.fabricmc", module = "fabric-loader")
+    }
 }
 
 java {

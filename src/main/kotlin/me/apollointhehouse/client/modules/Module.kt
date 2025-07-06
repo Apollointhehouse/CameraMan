@@ -1,7 +1,7 @@
 package me.apollointhehouse.client.modules
 
-import me.apollointhehouse.client.ClientLogic.Companion.clientRegistry
-import me.apollointhehouse.raywire.Raywire.globalRegistry
+import me.apollointhehouse.client.ClientLogic.Companion.clientBus
+import me.apollointhehouse.raywire.Raywire.globalBus
 import net.minecraft.client.Minecraft
 import net.minecraft.client.entity.player.PlayerLocal
 
@@ -19,8 +19,8 @@ abstract class Module(val name: String, val keyCode: Int = -1) {
 		if (!enabled) return
 
 		enabled = false
-		globalRegistry.unsubscribe(this)
-		clientRegistry.unsubscribe(this)
+		globalBus.unsubscribe(this)
+		clientBus.unsubscribe(this)
 		onDisable()
 	}
 
@@ -29,7 +29,7 @@ abstract class Module(val name: String, val keyCode: Int = -1) {
 
 		enabled = true
 		onEnable()
-		globalRegistry.subscribe(this)
-		clientRegistry.subscribe(this)
+		globalBus.subscribe(this)
+		clientBus.subscribe(this)
 	}
 }

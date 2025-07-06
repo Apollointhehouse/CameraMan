@@ -2,8 +2,8 @@ package me.apollointhehouse.server
 
 import me.apollointhehouse.core.EnvLogic
 import me.apollointhehouse.logger
-import me.apollointhehouse.raywire.Raywire.globalRegistry
-import me.apollointhehouse.raywire.api.Registry
+import me.apollointhehouse.raywire.Raywire.globalBus
+import me.apollointhehouse.raywire.api.Bus
 import me.apollointhehouse.server.net.ServerNetHandler
 
 class ServerLogic : EnvLogic {
@@ -11,10 +11,10 @@ class ServerLogic : EnvLogic {
 		logger.info("Running server logic...")
 
 		logger.info("Registering server net handler...")
-		globalRegistry.subscribe(ServerNetHandler())
+		globalBus.subscribe(ServerNetHandler())
 	}
 
 	companion object {
-		val serverRegistry = Registry()
+		val serverBus = Bus()
 	}
 }

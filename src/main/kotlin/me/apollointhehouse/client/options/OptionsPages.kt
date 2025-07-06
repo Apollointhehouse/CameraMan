@@ -1,6 +1,6 @@
 package me.apollointhehouse.client.options
 
-import me.apollointhehouse.CameraMan.MOD_ID
+import me.apollointhehouse.MOD_ID
 import me.apollointhehouse.client.ClientConfig
 import me.apollointhehouse.client.modules.ModuleManager
 import me.apollointhehouse.client.utils.addCallback
